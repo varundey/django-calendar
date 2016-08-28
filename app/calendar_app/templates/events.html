@@ -1,11 +1,9 @@
-<div class="col-lg-9" id="calendar_cont">
-				<div id="calendar">
-				{% for i in events %}
-					{{ i }}
-					<li>From {{ i.start_date }} to {{ i.end_date }}</li>
-					{% if i.location %}
-						<li>At {{ i.location }}</li>
-					{% endif %}
-				{% endfor %}
-				</div>
-		</div>
+<div>
+	{% for i in events %}
+		{{ i }}
+		<li>From {{ i.start_date }} to {{ i.end_date }}</li>
+		{% if i.location %}
+			<li>At {{ i.location }}</li>
+		{% endif %}
+	{% endfor %}
+</div>
