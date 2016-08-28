@@ -11,7 +11,8 @@
 
 .ui-datepicker {
     display: none;
-    width: 300px;
+    width: 100%;
+    height: 100%;
     padding: 35px;
     cursor: default;
  
@@ -36,12 +37,17 @@
     border-bottom: 1px solid #d6d6d6;
 }
  
-.ui-datepicker-title { text-align: center; }
+.ui-datepicker-title { 
+    text-align: center;     
+    font-size: 22px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
  
 .ui-datepicker-month {
     position: relative;
     padding-right: 15px;
-    color: #2ed39e;
+    color: black;
 }
  
 .ui-datepicker-year {
@@ -122,14 +128,19 @@
     text-align: center;
     line-height: 26px;
 }
+.ui-datepicker-calendar{
+    width: 100% !important;
+    height: 100% !important;
+}
  
 .ui-datepicker-calendar .ui-state-default {
     display: block;
-    width: 26px;
+    width: 100%;
+    text-align: right;
     outline: none;
  
     text-decoration: none;
-    color: #a8a8a8;
+    color: black;
  
     border: 1px solid transparent;
 }
@@ -137,9 +148,19 @@
 .ui-datepicker-calendar .ui-state-active {
     color: #6a9113;
     border: 1px solid #6a9113;
+    height: 100%;
+    width: 100%;
 }
  
 .ui-datepicker-other-month .ui-state-default { color: #565656; }
 
+
+
+#calendar{
+    width: 100%;
+}
+.ui-datepicker-unselectable > span{
+    color: #a8a8a8 !important;
+}
 
 
