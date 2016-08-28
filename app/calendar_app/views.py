@@ -7,18 +7,11 @@ from calendar_app.forms import EventForm
 # Create your views here.
 
 def index(request):
-	
-	events = Event.objects.all()
-	# return HttpResponse(events, content_type='json')
-	# return render(request, 'index.html', {'events':events})
-	# events=RequestEvents(request)
 	if request.method=='POST':
 		form = EventForm(request.POST)
 		if form.is_valid():
 			form.save()
 			form = EventForm()
-		# else:
-		# 	print form.errors
 	else:
 		form = EventForm()
 	return render(request, 'index.html', {"form":form})
