@@ -21,4 +21,8 @@ def index(request):
 		# 	print form.errors
 	else:
 		form = EventForm()
-	return render(request, 'index.html', {'events':events, "form":form})
+	return render(request, 'index.html', {"form":form})
+
+def events(request):
+	events = Event.objects.all()
+	return render(request, 'events.html', {'events':events})

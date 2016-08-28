@@ -13,7 +13,7 @@
 				    </div>
 				    <div id="collapse1" class="panel-collapse collapse" aria-expanded="false">
 				      <div class="panel-body">
-	      					<form id="form" method="post" action="">
+	      					<form id="form" method="post" action="/events/">
 							{% csrf_token %}
 							{% load bootstrap %}
 						    {{ form|bootstrap }}
@@ -26,17 +26,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-9" id="calendar_cont">
-				<div id="calendar">
-				{% for i in events %}
-					{{ i }}
-					<li>From {{ i.start_date }} to {{ i.end_date }}</li>
-					{% if i.location %}
-						<li>At {{ i.location }}</li>
-					{% endif %}
-				{% endfor %}
-				</div>
-		</div>
+
 	</div>
 </div>
 	
