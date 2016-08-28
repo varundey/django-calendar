@@ -1,0 +1,25 @@
+<!-- <div id="calendar"></div>
+{% load staticfiles %}
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js'%}"></script>
+<script src="{% static 'js/calendar.js'%}"></script>
+<link rel="stylesheet" href="static/css/style.css"> -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/ajax.js' %}"></script>
+
+<form id="form" method="post" action="">{% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Create new Event" />
+</form>
+
+
+<div id="calendar">
+{% for i in events %}
+{{ i }}
+<li>From {{ i.start_date }} to {{ i.end_date }}</li>
+{% if i.location %}
+<li>At {{ i.location }}</li>
+{% endif %}
+{% endfor %}
+</div>
