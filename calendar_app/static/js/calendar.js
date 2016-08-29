@@ -64,13 +64,9 @@ $(document).ready(function() {
 						for(var index in  dict[date]){
 							var item = dict[date][index];
 							main = main.add($("<a class='event_link' href = "+ date +";" + index +">" + item['fields']['event_name'] + "</a>"));
-							if(index > 0){
-								main = main.add($("<a class='event_more' href = ''>View more</a>"));
-								break;
-							}
 						};
 
-						$(this).append(main);
+						$(this).html(main);
 					}
 				})
 
@@ -87,7 +83,7 @@ $(document).ready(function() {
 					for(var key in fields){
 						p.append($("<h6 style='display:inline;'>" + key.replace("_"," ") + "</h6>&nbsp;&nbsp;&nbsp; <span>" + fields[key] + "</span><br/>"));
 					}
-					console.log(p);
+					//console.log(p);
 					$(".event_modal_body").html(p);
 					$("#myModal").modal('toggle');
 					e.preventDefault();
@@ -96,28 +92,19 @@ $(document).ready(function() {
 				});
 			}
 		});
-
 	}
-
 
 	$('#calendar').datepicker('option', 'onChangeMonthYear', onChangeMonthYear);
 	var date = $("#calendar").datepicker( 'getDate' );
 	onChangeMonthYear(date.getFullYear(), date.getMonth() + 1);
-
-
-	
-
 
 	$(document).on('click', 'a.ui-state-default',function(e){
 		e.preventDefault();
 		return false;
 	});
 
-
 	$('#calendar').datepicker('option', 'onSelect', function(){
 			var date = $("#calendar").datepicker( 'getDate' );
 			onChangeMonthYear(date.getFullYear(), date.getMonth() + 1);
-	});
-	
-	
+	});	
 });

@@ -1,0 +1,6 @@
+Django==1.9.7
+django-bootstrap-form==0.2
+gunicorn==19.6.0
+psycopg2==2.5.4
+whitenoise==3.2
+dj-database-url==0.4.1
