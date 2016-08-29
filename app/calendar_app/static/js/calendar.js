@@ -3,7 +3,6 @@ $(document).ready(function() {
 
 	function create_event() {
 	    console.log("create post is working!");
-
 	};
 
 	$('#form').on('submit', function(event){
@@ -21,6 +20,6 @@ $(document).ready(function() {
 		});
 
 	$("#calendar a").click(function(){
-		alert("fds");
+		// alert("fds");
 	});
 });
