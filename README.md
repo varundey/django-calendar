@@ -1,8 +1,8 @@
 # django-calendar
 
 ## To Do
-- [ ] Make proper roper form
+- [x] Make the form proper
 - [ ] Make ajax calls to `calendar` div so that it automatically refreshes from model
 - [ ] On click event to edit and delete
-- [ ] Integrate on click event with model
-- [ ] Build an actual calendar
+- [x] Integrate on click event with model
+- [x] Build an actual calendar
